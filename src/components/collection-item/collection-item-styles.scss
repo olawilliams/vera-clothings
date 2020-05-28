@@ -1,9 +1,27 @@
 .collection-item {
     display: flex;
     flex-direction: column;
+    position: relative;
     width: 22%;
     height: 350px;
     align-items: center;
+
+    button {
+        position: absolute;
+        bottom: 20%;
+       
+        display: none;
+    }
+
+    &:hover {
+        opacity: 0.9;
+
+        button {
+            display: block;
+            outline: none;
+        }
+    }
+
 
     .image {
         width: 100%;

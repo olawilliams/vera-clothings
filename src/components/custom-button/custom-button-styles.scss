@@ -3,7 +3,7 @@
     width: auto;
     height: 50px;
     padding: 0 35px 0 35px;
-    font-size: 14px;
+    font-size: 13px;
     background-color: black;
     color: white;
     text-transform: uppercase;
@@ -26,7 +26,18 @@
             background: #357ae8;
             border: none;
         }
-    }  
+    } 
+
+    &.inverted {
+        color: black;
+        background: white;
+
+        &:hover {
+            background-color: black;
+            color: white;
+            opacity: 0.9;
+        }
+    } 
 
     
 }
