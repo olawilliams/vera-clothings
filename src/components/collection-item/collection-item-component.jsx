@@ -2,7 +2,8 @@ import React from 'react';
 import './collection-item-styles.scss';
 
 import { connect } from 'react-redux';
-import { addItem } from '../../redux/cart/cart-action'
+import { addItem  } from '../../redux/cart/cart-action'
+
 import CustomButton from '../custom-button/custom-button-component'
 
 const CollectionItem = ({ item, addItem }) =>{
@@ -12,7 +13,10 @@ return (
         <div className='image'
             style = {{ backgroundImage: `url(${imageUrl})`}}
         />
-        <CustomButton onClick={() => addItem(item)}
+        <CustomButton onClick={() => {
+            addItem(item)
+          
+        }}
              inverted>add to cart</CustomButton>
         <div className='collection-footer'>
             <span className='name'>{name}</span>
@@ -22,7 +26,7 @@ return (
 )};
 
 const mapDispatch = dispatch => ({
-    addItem: item => dispatch(addItem(item))
+    addItem: item => dispatch(addItem(item)),
 })
 
 export default connect(null,
