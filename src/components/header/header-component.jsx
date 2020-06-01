@@ -24,11 +24,14 @@ const Header = ({ currentUser, hidden, cartNotification }) => (
             ? <SimpleAlerts />
             : null
         }
-        < Logo className='logo-container' />
+
+        <Link to='/'>< Logo className='logo-container' /></Link>
+        
 
         <div className='options'>
             <Link className='option' to='/'>HOME </Link>
             <Link className='option' to='/shop'>SHOP </Link>
+            <Link className='option' to='/ordersearch'>ORDERS </Link>
             <Link className='option' to='/contact'>CONTACT </Link>
             { currentUser  ?
              <div className='option' onClick={() =>auth.signOut()}>SIGN OUT </div> 

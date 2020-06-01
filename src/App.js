@@ -15,7 +15,9 @@ import ShopPage from './pages/shop-page/shop-page-component';
 import Header from './components/header/header-component';
 import SignInAndSignUp from './pages/signin-and-signup-page/signin-and-signup-component';
 import CheckOut from './pages/checkout/checkout-component';
-
+import CollectionPage from './pages/collection-page/collection-page-component';
+import OrderDetails from './pages/order-details/order-details-component';
+import OrderSearch from './pages/order-search/order-search-component'
 
 class App extends React.Component {
 
@@ -59,7 +61,9 @@ class App extends React.Component {
             }  
           />
           <Route exact path='/checkout' component={CheckOut} />
-          
+          <Route exact path='/shop/:id' component={CollectionPage} />
+          <Route exact path='/orderconfirmation' component={OrderDetails}/>
+          <Route exact path='/ordersearch' component={OrderSearch} />          
         </Switch>
       </div>
     );

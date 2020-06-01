@@ -3,11 +3,26 @@
     flex-direction: column;
     margin-bottom: 30px;
 
-    .title {
-        font-size: 28px;
-        margin-bottom: 25px;
+    .heading {
+        display: flex;
         cursor: pointer;
+        padding: 0 10px;
+
+        .title {
+            font-size: 28px;
+            margin-bottom: 25px;
+        }
+
+        .view {
+            text-transform: uppercase;
+            text-decoration: underline;
+            font-size: 14px;
+            color: rgb(46, 90, 46);
+            margin-top: 32px;
+            margin-left: 5px;
+        }
     }
+
 
     .preview {
         display: flex;

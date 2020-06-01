@@ -1,5 +1,5 @@
 import React from 'react';
-// import StripeCheckout from 'react-stripe-checkout';
+
 import './checkout-styles.scss';
 
 import { connect } from 'react-redux';
@@ -7,6 +7,7 @@ import { createStructuredSelector } from 'reselect'
 import { selectTotal, selectCartItem } from '../../redux/cart/cart-selectors';
 
 import CheckOutItem from '../../components/checkout-item/checkout-item-component';
+import StripeCheckoutButton from '../../components/stripe-checkout/stripe-component';
 
 const CheckOut = ({ total, cartItems }) => (
     <div className='checkout-page'>
@@ -35,8 +36,10 @@ const CheckOut = ({ total, cartItems }) => (
     }
 
        <div className='total'>
-           <span>${total}</span>
+           <span>TOTAL: ${total}</span>
        </div>
+
+       <StripeCheckoutButton price={total}/>
 
        <div className='test-warning'> 
        *Please use the folllowing test credit card for payment* <br />

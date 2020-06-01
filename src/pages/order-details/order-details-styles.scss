@@ -1,0 +1,42 @@
+.order-details-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    left: 20%;
+    top: 15%;
+    width: 600px;
+    text-align: center;
+    border: 1px solid grey;
+
+    .top-message {
+        font-size: 18px;
+        font-weight: bold;
+        display: flex;
+        flex-direction: column;
+         
+    }
+
+    .search-result {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+
+        .title {
+            font-weight: lighter;
+            font-size: 18px;
+        }
+
+        .details {
+            display: grid;
+            grid-template-columns: 50% 50%;
+
+            .detail {
+                display: inline-flex;
+                justify-content: space-between;
+                padding: 5px 30px;
+            }
+        }
+    }
+}

@@ -1,9 +1,11 @@
 import cartActionTypes from './cart-action-types';
+import orderActionTypes from '../orders/order-types'
 import { addItemToCart, removeItem } from './cart-utils';
 
 const INITIAL_STATE = {
     hidden: true,
     cartItems: [],
+    orderItems: [],
     cartNotification: false
 };
 
@@ -39,6 +41,12 @@ const cartReducer = (state = INITIAL_STATE, action) => {
                 return {
                     ...state,
                     cartNotification : !state.cartNotification
+                }
+
+            case orderActionTypes.GET_PAYMENT_TOKEN :
+                return {
+                    ...state,
+                    orderItems: [...state.cartItems]
                 }
         default:
            return state;
